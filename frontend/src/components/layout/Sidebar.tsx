@@ -1,17 +1,17 @@
 import { NavLink, useLocation } from 'react-router-dom';
 import { useApp } from '../../context/AppContext';
 import { useNamespaces } from '../../api/hooks';
-import { RESOURCE_CATEGORIES, type ResourceType } from '../../types/k8s';
+import { RESOURCE_CATEGORIES } from '../../types/k8s';
 import { useState } from 'react';
 import {
   LayoutDashboard, Network, ChevronDown, ChevronRight, Eye, CalendarClock,
   Box, Layers, Server, GitBranch, Timer, Clock, Globe, Route, Waypoints,
   Shield, FileText, Lock, UserCircle, HardDrive, Database, FolderOpen,
-  Users, KeyRound, ShieldCheck, ShieldAlert
+  Users, KeyRound, ShieldCheck, ShieldAlert, type LucideIcon
 } from 'lucide-react';
 import clsx from 'clsx';
 
-const RESOURCE_ICONS: Record<string, any> = {
+const RESOURCE_ICONS: Record<string, LucideIcon> = {
   pods: Box, deployments: Layers, statefulsets: Server, daemonsets: GitBranch,
   replicasets: Layers, jobs: Timer, cronjobs: Clock,
   services: Globe, ingresses: Route, endpoints: Waypoints, networkpolicies: Shield,

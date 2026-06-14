@@ -127,7 +127,7 @@ export function VisualizerGraph({ graph }: VisualizerGraphProps) {
         <Background />
         <Controls />
         <MiniMap
-          nodeColor={(n) => n.data?.color || '#6b7280'}
+          nodeColor={(n: Node) => (n.data?.color as string) || '#6b7280'}
           style={{ height: 100, width: 150 }}
         />
       </ReactFlow>
